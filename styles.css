@@ -1,67 +1,62 @@
-body {
-font-family: 'Inter', sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-/* Smooth liquid animation */
-@keyframes float {
-0% { transform: translate(0px, 0px) scale(1); }
-33% { transform: translate(30px, -50px) scale(1.1); }
-66% { transform: translate(-20px, 20px) scale(0.9); }
-100% { transform: translate(0px, 0px) scale(1); }
-}
-.animate-float-slow {
-animation: float 20s ease-in-out infinite;
-}
-.animate-float-medium {
-animation: float 15s ease-in-out infinite reverse;
-}
-.animate-fade-in-up {
-animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-opacity: 0;
-transform: translateY(20px);
-}
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-@keyframes fadeInUp {
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-.no-scrollbar::-webkit-scrollbar {
-display: none;
-}
-.no-scrollbar {
--ms-overflow-style: none;
-scrollbar-width: none;
-}
-.font-serif {
-font-family: 'Playfair Display', serif;
-}
-/* Creative Scroll Animations */
-.reveal-on-scroll {
-opacity: 0;
-transform: translateY(40px) scale(0.96);
-filter: blur(4px);
-transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease-out;
-will-change: opacity, transform, filter;
-}
-.reveal-on-scroll.is-visible {
-opacity: 1;
-transform: translateY(0) scale(1);
-filter: blur(0);
-}
-.delay-100 { transition-delay: 0.1s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-300 { transition-delay: 0.3s; }
-/* Custom float animation for showcase */
-@keyframes float-showcase {
-0%, 100% { transform: translate(0, 0); }
-33% { transform: translate(10px, -15px); }
-66% { transform: translate(-5px, 10px); }
-}
-.animate-float-showcase {
-animation: float-showcase 10s ease-in-out infinite;
-}
+    /* Smooth liquid animation */
+    @keyframes float {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(25px, -35px) scale(1.05); }
+    }
+    @keyframes float-reverse {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-25px, 35px) scale(0.95); }
+    }
+    .animate-float-slow { animation: float 18s ease-in-out infinite; }
+    .animate-float-medium { animation: float-reverse 14s ease-in-out infinite; }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    
+    /* Creative Scroll Animations */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px) scale(0.96);
+      filter: blur(4px);
+      transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease-out;
+      will-change: opacity, transform, filter;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+    .delay-100 { transition-delay: 0.1s; animation-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; animation-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; animation-delay: 0.3s; }
+    
+    /* Custom smooth float animation for showcase */
+    @keyframes float-showcase {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+    .animate-float-showcase {
+      animation: float-showcase 8s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    /* Hero Image Slider */
+    @keyframes hero-slide {
+      0%, 25% { transform: translateX(0); }
+      33%, 58% { transform: translateX(-33.333%); }
+      66%, 91% { transform: translateX(-66.666%); }
+      100% { transform: translateX(0); }
+    }
+    .animate-hero-slide {
+      animation: hero-slide 15s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      will-change: transform;
+    }
