@@ -1,4 +1,6 @@
-lucide.createIcons();
+if (window.lucide && typeof window.lucide.createIcons === 'function') {
+  window.lucide.createIcons();
+}
 
      document.addEventListener('DOMContentLoaded', () => {
         const observerOptions = {
@@ -90,9 +92,7 @@ lucide.createIcons();
         const b = document.createElement("button");
         b.type = "button";
         b.setAttribute("aria-label", `Go to testimonial ${i + 1}`);
-        b.className =
-          "h-2.5 rounded-full transition-all duration-300 " +
-          (i === index ? "w-10 bg-gray-900" : "w-2.5 bg-gray-300 hover:bg-gray-400");
+        b.className = "h-2.5 rounded-full transition-all duration-300 " + (i === index ? "w-10 bg-gray-900" : "w-2.5 bg-gray-300 hover:bg-gray-400");
         b.addEventListener("click", () => {
           if (i === index) return;
           index = i;
