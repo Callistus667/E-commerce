@@ -3,6 +3,9 @@ font-family: 'Inter', sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
+html {
+	font-size: 112.5%;
+}
 /* Smooth liquid animation */
 @keyframes float {
 0% { transform: translate(0px, 0px) scale(1); }
