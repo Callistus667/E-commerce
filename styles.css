@@ -6,6 +6,12 @@ font-family: 'Inter', sans-serif;
 html {
 	font-size: 112.5%;
 }
+
+/* Reduce extreme arbitrary Tailwind rounded sizes (e.g. rounded-[40px])
+	 without affecting semantic classes like rounded-md or rounded-full */
+[class*="rounded-["] {
+	border-radius: 12px !important;
+}
 /* Smooth liquid animation */
 @keyframes float {
 0% { transform: translate(0px, 0px) scale(1); }

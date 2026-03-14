@@ -33,32 +33,24 @@ if (window.lucide && typeof window.lucide.createIcons === 'function') {
 
     const testimonials = [
       {
-        avatar:
-          "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg",
         quote:
           "The layout feels premium and effortless. Our conversion rate went up within the first week after switching.",
         name: "Ava Thompson",
         role: "Verified Buyer",
       },
       {
-        avatar:
-          "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg",
         quote:
           "Beautiful motion, clean hierarchy, and it loads fast. It finally looks like a modern brand, not a template.",
         name: "Noah Patel",
         role: "Store Owner",
       },
       {
-        avatar:
-          "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5bab247f-35d9-400d-a82b-fd87cfe913d2_1600w.webp",
         quote:
           "The product grids and collection cards are so easy to scan. Customers find what they want faster now.",
         name: "Mia Laurent",
         role: "Verified Buyer",
       },
       {
-        avatar:
-          "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
         quote:
           "It feels like Apple-level polish with ecommerce practicality. Smooth, minimal, and confident.",
         name: "Ethan Rivera",
