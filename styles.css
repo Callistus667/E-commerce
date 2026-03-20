@@ -74,3 +74,35 @@ filter: blur(0);
 .animate-float-showcase {
 animation: float-showcase 10s ease-in-out infinite;
 }
+
+/* Hero background sliding track (seamless loop using duplicated slides) */
+@keyframes heroSlide {
+	/* Hold each slide for ~3s, transition ~0.5s; total cycle 10.5s */
+	0% { transform: translateX(0%); }
+	28.571% { transform: translateX(0%); }
+	33.333% { transform: translateX(-16.666666%); }
+	61.905% { transform: translateX(-16.666666%); }
+	66.666% { transform: translateX(-33.333333%); }
+	95.238% { transform: translateX(-33.333333%); }
+	100% { transform: translateX(-50%); }
+}
+/* Hero background track - transitions are handled via JavaScript for smooth control */
+.hero-bg-track {
+	transform: translateX(0%);
+	transition: transform 600ms ease;
+	will-change: transform;
+}
+
+/* Strong left-to-right hero gradient: left side colored, right side transparent */
+.hero-gradient {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	/* Strong hard blue on the far left, then soften toward the center-right, transparent on the far right */
+	background: linear-gradient(90deg,
+		rgba(13,42,148,1) 0%,
+		rgba(13,42,148,0.95) 18%,
+		rgba(13,42,148,0.5) 36%,
+		rgba(255,255,255,0) 62%);
+	z-index: 5;
+}
