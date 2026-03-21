@@ -99,9 +99,88 @@ animation: float-showcase 10s ease-in-out infinite;
 	inset: 0;
 	pointer-events: none;
 	background: linear-gradient(90deg,
-		rgba(79,70,229,0.92) 0%,
-		rgba(79,70,229,0.65) 25%,
-		rgba(99,102,241,0.35) 40%,
-		rgba(255,255,255,0) 55%);
+		rgba(49,46,129,1) 0%,
+		rgba(49,46,129,0.95) 45%,
+		rgba(67,56,202,0.7) 60%,
+		rgba(255,255,255,0) 65%);
 	z-index: 5;
+}
+
+:root {
+  --brand-rgb: 255, 124, 2;
+  --brand: #ff7c02;
+  --brand-alpha: rgba(255, 124, 2, 0.733);
+  --brand-soft: rgba(255, 124, 2, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.accent-text {
+  color: var(--brand);
+}
+
+.accent-bg {
+  background-color: var(--brand-alpha);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.66));
+  border: 1px solid rgba(var(--brand-rgb), 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.soft-shadow {
+  box-shadow: 0 18px 35px -26px rgba(0, 0, 0, 0.25), 0 8px 20px -14px rgba(var(--brand-rgb), 0.35);
+}
+
+[data-parallax] {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 40px -22px rgba(var(--brand-rgb), 0.35);
+}
+
+.hover-lift {
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  filter: saturate(1.03);
+}
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand), rgba(var(--brand-rgb), 0.6));
+  z-index: 60;
+}
+
+.cta-button {
+  background: var(--brand-alpha);
+  color: #fff;
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+  box-shadow: 0 10px 20px -12px rgba(var(--brand-rgb), 0.8);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.chip {
+  background: rgba(var(--brand-rgb), 0.1);
+  color: #3f2b10;
+  border: 1px solid rgba(var(--brand-rgb), 0.25);
 }
