@@ -11,13 +11,13 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap');
 :root {
---bg-dark: #0D0D0D;
+--bg-dark: #FFFFFF;
 --accent: #FF6B00;
 }
 body {
 font-family: 'Inter', sans-serif;
 background-color: var(--bg-dark);
-color: #FFFFFF;
+color: #374151;
 -webkit-font-smoothing: antialiased;
 }
 .font-oswald {
@@ -38,8 +38,8 @@ animation: marquee 45s linear infinite;
 }
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--bg-dark); }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #F3F4F6; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 /* FAQ Icon Transition */
 .faq-icon { transition: transform 0.3s ease; }
@@ -82,32 +82,32 @@ gtag('config', 'G-2M6V79H761');
 <body class="overflow-x-hidden selection:bg-[#FF6B00] selection:text-[#0D0D0D]">
 
     <!-- 1. NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-black border-b border-transparent">
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="font-oswald text-2xl font-medium tracking-tight uppercase flex items-center gap-1">
                 <img src="nabrok-group-web2-removebg-preview.png" alt="Nabrok Group" class="h-8 w-auto">
             </a>
             
             <nav class="hidden md:flex gap-8">
-                <a href="index.html" class="text-base font-medium text-zinc-300 hover:text-[#FF6B00] transition-colors">Home</a>
+                <a href="index.html" class="text-base font-medium text-gray-600 hover:text-[#FF6B00] transition-colors">Home</a>
 
                 <div class="relative group">
-                    <button class="flex items-center gap-2 text-base font-medium text-zinc-300 hover:text-[#FF6B00] transition-colors">
+                    <button class="flex items-center gap-2 text-base font-medium text-gray-600 hover:text-[#FF6B00] transition-colors">
                         About Us
-                        <svg class="w-3 h-3 text-zinc-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
                     </button>
                     <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
                         <a href="our-values.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Our Values</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What We Do</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Who We Are</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What Makes Us Stand-Out</a>
+                        <a href="what-we-do.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What We Do</a>
+                        <a href="who-we-are.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Who We Are</a>
+                        <a href="what-makes-us-stand-out.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What Makes Us Stand-Out</a>
                     </div>
                 </div>
 
                 <div class="relative group">
-                    <button class="flex items-center gap-2 text-base font-medium text-zinc-300 hover:text-[#FF6B00] transition-colors">
+                    <button class="flex items-center gap-2 text-base font-medium text-gray-600 hover:text-[#FF6B00] transition-colors">
                         Sub-Companies
-                        <svg class="w-3 h-3 text-zinc-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
                     </button>
                     <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Prime Nest Ltd</a>
@@ -119,9 +119,9 @@ gtag('config', 'G-2M6V79H761');
                 </div>
 
                 <div class="relative group">
-                    <button class="flex items-center gap-2 text-base font-medium text-zinc-300 hover:text-[#FF6B00] transition-colors">
+                    <button class="flex items-center gap-2 text-base font-medium text-gray-600 hover:text-[#FF6B00] transition-colors">
                         Galleries
-                        <svg class="w-3 h-3 text-zinc-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
                     </button>
                     <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Properties Gallery</a>
@@ -132,13 +132,13 @@ gtag('config', 'G-2M6V79H761');
                     </div>
                 </div>
 
-                <a href="#" class="text-base font-medium text-zinc-300 hover:text-[#FF6B00] transition-colors">Publications</a>
-                <a href="#" class="text-base font-medium text-zinc-300 hover:text-[#FF6B00] transition-colors">Contact Us</a>
+                <a href="#" class="text-base font-medium text-gray-600 hover:text-[#FF6B00] transition-colors">Publications</a>
+                <a href="#" class="text-base font-medium text-gray-600 hover:text-[#FF6B00] transition-colors">Contact Us</a>
             </nav>
 
             <div class="flex items-center gap-4">
 
-                <button class="md:hidden text-white p-2">
+                <button class="md:hidden text-gray-700 p-2">
                     <i data-lucide="menu" stroke-width="1.5"></i>
                 </button>
             </div>
@@ -146,21 +146,21 @@ gtag('config', 'G-2M6V79H761');
     </header>
 
     <!-- 2. HERO SECTION -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#0D0D0D] overflow-hidden smooth-reveal">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white overflow-hidden smooth-reveal">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             
             <div class="relative z-10 max-w-2xl">
-                <h1 class="reveal-text font-oswald text-5xl md:text-6xl lg:text-[5rem] font-medium tracking-tight uppercase leading-[1.05] text-white">
+                <h1 class="reveal-text font-oswald text-5xl md:text-6xl lg:text-[5rem] font-medium tracking-tight uppercase leading-[1.05] text-gray-900">
                     
                     <span class="text-[#FF6B00]">Our Values</span><br>
                     and what we stand for
                 </h1>
-                <p class="reveal-text mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-lg">
+                <p class="reveal-text mt-8 text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
                     Nabrok Group runs on our 5 EPIC values. These values shape our leadership, our partnerships, and the way we deliver excellent service across our businesses.
                 </p>
                 <div class="reveal-text mt-10">
-                    <a href="#" class="inline-flex items-center gap-3 bg-[#FF6B00] text-[#0D0D0D] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#FF7A1A] transition-transform hover:scale-105 group">
-                        <span class="bg-[#0D0D0D] text-[#FF6B00] p-1.5 rounded-full group-hover:bg-white group-hover:text-[#0D0D0D] transition-colors">
+                    <a href="#" class="inline-flex items-center gap-3 bg-[#FF6B00] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#FF7A1A] transition-transform hover:scale-105 group">
+                        <span class="bg-white text-[#FF6B00] p-1.5 rounded-full group-hover:bg-[#0D0D0D] group-hover:text-white transition-colors">
                             <i data-lucide="play" class="w-5 h-5 ml-0.5" stroke-width="1.5"></i>
                         </span>
                         Explore Our Values
@@ -179,11 +179,9 @@ gtag('config', 'G-2M6V79H761');
                     
                     <!-- Image Wrapper -->
                     <div class="relative w-full h-full rounded-full overflow-hidden bg-zinc-900 border border-white/5">
-                        <!-- Placeholder for Trainer Photo -->
-                        <div class="absolute inset-0 bg-zinc-800 mix-blend-overlay"></div>
-                        <div class="flex text-zinc-700 absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
-                            <i data-lucide="Nabrok-Foundation.jpg" class="w-16 h-16 opacity-50" stroke-width="1.5"></i>
-                        </div>
+                        <!-- Hero Image -->
+                        <img src="Nabrok_Group_pic.jpg" alt="Nabrok Group" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
                 </div>
             </div>
@@ -216,10 +214,9 @@ gtag('config', 'G-2M6V79H761');
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
             <div class="relative w-full aspect-[4/5] bg-zinc-100 rounded-[2rem] overflow-hidden shadow-xl border border-zinc-200">
-                <!-- Placeholder for Square Photo -->
-                <div class="flex text-zinc-300 absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
-                    <i data-lucide="user" class="w-24 h-24" stroke-width="1.5"></i>
-                </div>
+                <!-- EPIC Values Image -->
+                <img src="Nabrok-Foundation.jpg" alt="Nabrok Foundation" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
 
             <div>
@@ -254,43 +251,43 @@ gtag('config', 'G-2M6V79H761');
     </section>
 
     <!-- 5. PRICING -->
-    <section id="values" class="bg-[#0D0D0D] py-24 lg:py-32 smooth-reveal">
+    <section id="values" class="bg-gray-50 py-24 lg:py-32 smooth-reveal">
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="reveal-text font-oswald text-4xl lg:text-5xl font-medium tracking-tight uppercase text-white">
+                <h2 class="reveal-text font-oswald text-4xl lg:text-5xl font-medium tracking-tight uppercase text-gray-900">
                     Our <span class="text-[#FF6B00]">EPIC</span> Values
                 </h2>
-                <p class="reveal-text mt-4 text-lg text-zinc-400">These values define how we work and how we deliver value across every Nabrok company.</p>
+                <p class="reveal-text mt-4 text-lg text-gray-600">These values define how we work and how we deliver value across every Nabrok company.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
                 
                 <!-- Plan 1 -->
-                <div class="bg-[#111111] border border-white/10 rounded-[2rem] p-8 lg:p-10 transition-colors hover:border-[#FF6B00]/40">
-                    <h3 class="font-oswald text-3xl font-medium tracking-tight uppercase text-white mb-2">Experience</h3>
-                    <div class="text-lg text-zinc-400 mb-8 pb-8 border-b border-white/10 h-[60px]">Leaders and experts in every area we operate.</div>
+                <div class="bg-white border border-gray-200 rounded-[2rem] p-8 lg:p-10 transition-colors hover:border-[#FF6B00]/40 shadow-lg">
+                    <h3 class="font-oswald text-3xl font-medium tracking-tight uppercase text-gray-900 mb-2">Experience</h3>
+                    <div class="text-lg text-gray-600 mb-8 pb-8 border-b border-gray-200 h-[60px]">Leaders and experts in every area we operate.</div>
                     
                     <ul class="space-y-5 mb-10 min-h-[200px]">
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Led by senior practitioners</span>
+                            <span class="text-lg text-gray-700">Led by senior practitioners</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Deep field knowledge</span>
+                            <span class="text-lg text-gray-700">Deep field knowledge</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Practical decision-making</span>
+                            <span class="text-lg text-gray-700">Practical decision-making</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Sector-specific excellence</span>
+                            <span class="text-lg text-gray-700">Sector-specific excellence</span>
                         </li>
                     </ul>
                     
-                    <a href="#" class="block w-full py-4 px-6 rounded-full border border-[#FF6B00] text-[#FF6B00] text-center text-lg font-medium hover:bg-[#FF6B00] hover:text-[#0D0D0D] transition-colors">
+                    <a href="#" class="block w-full py-4 px-6 rounded-full border border-[#FF6B00] text-[#FF6B00] text-center text-lg font-medium hover:bg-[#FF6B00] hover:text-white transition-colors">
                         Learn More
                     </a>
                 </div>
@@ -300,58 +297,58 @@ gtag('config', 'G-2M6V79H761');
                     <!-- Subtle highlight -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/20 blur-3xl rounded-full"></div>
                     
-                    <h3 class="font-oswald text-3xl font-medium tracking-tight uppercase text-[#0D0D0D] mb-2 relative z-10">Partnership</h3>
-                    <div class="text-lg text-[#0D0D0D]/80 mb-8 pb-8 border-b border-[#0D0D0D]/10 font-medium h-[60px] relative z-10">Collaboration internally and externally.</div>
+                    <h3 class="font-oswald text-3xl font-medium tracking-tight uppercase text-white mb-2 relative z-10">Partnership</h3>
+                    <div class="text-lg text-white/90 mb-8 pb-8 border-b border-white/20 font-medium h-[60px] relative z-10">Collaboration internally and externally.</div>
                     
                     <ul class="space-y-5 mb-10 min-h-[200px] relative z-10">
                         <li class="flex items-start gap-3">
-                            <div class="w-2 h-2 rounded-full bg-[#0D0D0D] mt-2 shrink-0"></div>
-                            <span class="text-lg text-[#0D0D0D] font-medium">Partnership-first engagements</span>
+                            <div class="w-2 h-2 rounded-full bg-white mt-2 shrink-0"></div>
+                            <span class="text-lg text-white font-medium">Partnership-first engagements</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-2 h-2 rounded-full bg-[#0D0D0D] mt-2 shrink-0"></div>
-                            <span class="text-lg text-[#0D0D0D] font-medium">Shared expertise and learning</span>
+                            <div class="w-2 h-2 rounded-full bg-white mt-2 shrink-0"></div>
+                            <span class="text-lg text-white font-medium">Shared expertise and learning</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-2 h-2 rounded-full bg-[#0D0D0D] mt-2 shrink-0"></div>
-                            <span class="text-lg text-[#0D0D0D] font-medium">Collective value creation</span>
+                            <div class="w-2 h-2 rounded-full bg-white mt-2 shrink-0"></div>
+                            <span class="text-lg text-white font-medium">Collective value creation</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-2 h-2 rounded-full bg-[#0D0D0D] mt-2 shrink-0"></div>
-                            <span class="text-lg text-[#0D0D0D] font-medium">Stronger outcomes together</span>
+                            <div class="w-2 h-2 rounded-full bg-white mt-2 shrink-0"></div>
+                            <span class="text-lg text-white font-medium">Stronger outcomes together</span>
                         </li>
                     </ul>
                     
-                    <a href="#" class="block w-full py-4 px-6 rounded-full bg-[#0D0D0D] text-white text-center text-lg font-medium hover:bg-zinc-800 transition-colors relative z-10">
+                    <a href="#" class="block w-full py-4 px-6 rounded-full bg-white text-[#FF6B00] text-center text-lg font-medium hover:bg-gray-100 transition-colors relative z-10">
                         Learn More
                     </a>
                 </div>
 
                 <!-- Plan 3 -->
-                <div class="bg-[#111111] border border-white/10 rounded-[2rem] p-8 lg:p-10 transition-colors hover:border-[#FF6B00]/40">
-                    <h3 class="font-oswald text-3xl font-medium tracking-tight uppercase text-white mb-2">Innovation &amp; Commitment</h3>
-                    <div class="text-lg text-zinc-400 mb-8 pb-8 border-b border-white/10 h-[60px]">Functional alternatives and dependable delivery.</div>
+                <div class="bg-white border border-gray-200 rounded-[2rem] p-8 lg:p-10 transition-colors hover:border-[#FF6B00]/40 shadow-lg">
+                    <h3 class="font-oswald text-3xl font-medium tracking-tight uppercase text-gray-900 mb-2">Innovation &amp; Commitment</h3>
+                    <div class="text-lg text-gray-600 mb-8 pb-8 border-b border-gray-200 h-[60px]">Functional alternatives and dependable delivery.</div>
                     
                     <ul class="space-y-5 mb-10 min-h-[200px]">
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Challenge traditional thinking</span>
+                            <span class="text-lg text-gray-700">Challenge traditional thinking</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Faster, safer, measured methods</span>
+                            <span class="text-lg text-gray-700">Faster, safer, measured methods</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Keep promises and standards</span>
+                            <span class="text-lg text-gray-700">Keep promises and standards</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-2 h-2 rounded-full bg-[#FF6B00] mt-2 shrink-0"></div>
-                            <span class="text-lg text-zinc-300">Service reflects our integrity</span>
+                            <span class="text-lg text-gray-700">Service reflects our integrity</span>
                         </li>
                     </ul>
                     
-                    <a href="#" class="block w-full py-4 px-6 rounded-full border border-[#FF6B00] text-[#FF6B00] text-center text-lg font-medium hover:bg-[#FF6B00] hover:text-[#0D0D0D] transition-colors">
+                    <a href="#" class="block w-full py-4 px-6 rounded-full border border-[#FF6B00] text-[#FF6B00] text-center text-lg font-medium hover:bg-[#FF6B00] hover:text-white transition-colors">
                         Learn More
                     </a>
                 </div>
@@ -364,18 +361,18 @@ gtag('config', 'G-2M6V79H761');
 
 
     <!-- 7. FAQ -->
-    <section class="bg-[#0D0D0D] py-24 lg:py-32 smooth-reveal">
+    <section class="bg-white py-24 lg:py-32 smooth-reveal">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_1.5fr] gap-16">
             
             <div class="max-w-md">
-                <h2 class="font-oswald text-4xl lg:text-5xl font-medium tracking-tight uppercase leading-tight text-white">
+                <h2 class="font-oswald text-4xl lg:text-5xl font-medium tracking-tight uppercase leading-tight text-gray-900">
                     FREQUENTLY ASKED QUESTIONS
                 </h2>
-                <p class="mt-6 text-lg text-zinc-400">
+                <p class="mt-6 text-lg text-gray-600">
                     Quick answers to the things people ask most. Can't find what you're looking for? Reach out.
                 </p>
                 <div class="mt-10">
-                    <a href="#contact" class="inline-flex bg-[#FF6B00] text-[#0D0D0D] px-8 py-3.5 rounded-full text-lg font-medium hover:bg-[#FF7A1A] transition-colors">
+                    <a href="#contact" class="inline-flex bg-[#FF6B00] text-white px-8 py-3.5 rounded-full text-lg font-medium hover:bg-[#FF7A1A] transition-colors">
                         Contact
                     </a>
                 </div>
@@ -383,71 +380,71 @@ gtag('config', 'G-2M6V79H761');
 
             <div class="space-y-1">
                 <!-- FAQ Item 1 (Expanded) -->
-                <div class="border-b border-white/10">
+                <div class="border-b border-gray-200">
                     <button class="w-full py-6 flex items-center justify-between text-left group" onclick="toggleFaq(this)">
                         <div class="flex items-center gap-6">
                             <span class="font-oswald text-3xl text-[#FF6B00] font-medium tracking-tight">1</span>
-                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-white group-hover:text-[#FF6B00] transition-colors">What does Experience mean at Nabrok Group?</span>
+                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-gray-900 group-hover:text-[#FF6B00] transition-colors">What does Experience mean at Nabrok Group?</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-6 h-6 text-zinc-400 faq-icon rotate-180" stroke-width="1.5"></i>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-gray-500 faq-icon rotate-180" stroke-width="1.5"></i>
                     </button>
-                    <div class="faq-content overflow-hidden text-lg text-zinc-400 pb-6 pl-[3.5rem] md:pl-[4rem]">
+                    <div class="faq-content overflow-hidden text-lg text-gray-600 pb-6 pl-[3.5rem] md:pl-[4rem]">
                         We are leaders and experts in all areas where we do business. Each business is led by senior practitioners who understand the dynamics of their field.
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="border-b border-white/10">
+                <div class="border-b border-gray-200">
                     <button class="w-full py-6 flex items-center justify-between text-left group" onclick="toggleFaq(this)">
                         <div class="flex items-center gap-6">
                             <span class="font-oswald text-3xl text-[#FF6B00] font-medium tracking-tight">2</span>
-                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-white group-hover:text-[#FF6B00] transition-colors">What does Partnership mean to us?</span>
+                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-gray-900 group-hover:text-[#FF6B00] transition-colors">What does Partnership mean to us?</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-6 h-6 text-zinc-400 faq-icon" stroke-width="1.5"></i>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-gray-500 faq-icon" stroke-width="1.5"></i>
                     </button>
-                    <div class="faq-content overflow-hidden text-lg text-zinc-400 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
+                    <div class="faq-content overflow-hidden text-lg text-gray-600 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
                         We use a partnership approach to every engagement. Internally and externally, partnership amplifies our collective knowledge and impact.
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="border-b border-white/10">
+                <div class="border-b border-gray-200">
                     <button class="w-full py-6 flex items-center justify-between text-left group" onclick="toggleFaq(this)">
                         <div class="flex items-center gap-6">
                             <span class="font-oswald text-3xl text-[#FF6B00] font-medium tracking-tight">3</span>
-                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-white group-hover:text-[#FF6B00] transition-colors">How do we define Innovation?</span>
+                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-gray-900 group-hover:text-[#FF6B00] transition-colors">How do we define Innovation?</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-6 h-6 text-zinc-400 faq-icon" stroke-width="1.5"></i>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-gray-500 faq-icon" stroke-width="1.5"></i>
                     </button>
-                    <div class="faq-content overflow-hidden text-lg text-zinc-400 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
+                    <div class="faq-content overflow-hidden text-lg text-gray-600 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
                         We challenge traditional ways of thinking and suggest more functional alternatives. We develop faster, safer, measured, and economical ways to deliver value.
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="border-b border-white/10">
+                <div class="border-b border-gray-200">
                     <button class="w-full py-6 flex items-center justify-between text-left group" onclick="toggleFaq(this)">
                         <div class="flex items-center gap-6">
                             <span class="font-oswald text-3xl text-[#FF6B00] font-medium tracking-tight">4</span>
-                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-white group-hover:text-[#FF6B00] transition-colors">What does Commitment look like?</span>
+                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-gray-900 group-hover:text-[#FF6B00] transition-colors">What does Commitment look like?</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-6 h-6 text-zinc-400 faq-icon" stroke-width="1.5"></i>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-gray-500 faq-icon" stroke-width="1.5"></i>
                     </button>
-                    <div class="faq-content overflow-hidden text-lg text-zinc-400 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
+                    <div class="faq-content overflow-hidden text-lg text-gray-600 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
                         We offer the best service, keep our promises, and meet standards because what we do reflects the integrity of Nabrok Group.
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
-                <div class="border-b border-white/10">
+                <div class="border-b border-gray-200">
                     <button class="w-full py-6 flex items-center justify-between text-left group" onclick="toggleFaq(this)">
                         <div class="flex items-center gap-6">
                             <span class="font-oswald text-3xl text-[#FF6B00] font-medium tracking-tight">5</span>
-                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-white group-hover:text-[#FF6B00] transition-colors">How do these values shape our work?</span>
+                            <span class="font-oswald text-xl md:text-2xl font-medium tracking-tight uppercase text-gray-900 group-hover:text-[#FF6B00] transition-colors">How do these values shape our work?</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-6 h-6 text-zinc-400 faq-icon" stroke-width="1.5"></i>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-gray-500 faq-icon" stroke-width="1.5"></i>
                     </button>
-                    <div class="faq-content overflow-hidden text-lg text-zinc-400 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
+                    <div class="faq-content overflow-hidden text-lg text-gray-600 pb-0 h-0 pl-[3.5rem] md:pl-[4rem] hidden">
                         EPIC values guide our strategy, operations, and service quality across Agriculture, Real Estate, Transport, Home Decorations, Fashion, and more.
                     </div>
                 </div>
@@ -466,52 +463,52 @@ gtag('config', 'G-2M6V79H761');
         <div class="relative mt-24 sm:mt-32">
             <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-pink-500/20 rounded-[5px] sm:rounded-[20px] blur-2xl opacity-40"></div>
 
-            <footer class="relative bg-[#0A0A0B] rounded-[40px] sm:rounded-[60px] overflow-hidden text-white shadow-2xl ring-1 ring-white/10 reveal-on-scroll">
-                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            <footer class="relative bg-white rounded-[40px] sm:rounded-[60px] overflow-hidden text-gray-900 shadow-2xl ring-1 ring-gray-200 reveal-on-scroll">
+                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
                 <div class="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[350px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
 
                 <div class="px-8 py-8 sm:px-16 sm:py-12 relative z-10">
                     <div class="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
                         <div class="max-w-sm">
-                            <a href="#" class="text-2xl font-medium tracking-tighter text-white flex items-center gap-1 mb-6">
+                            <a href="#" class="text-2xl font-medium tracking-tighter text-gray-900 flex items-center gap-1 mb-6">
                                 NABROK
                             </a>
-                            <p class="text-gray-400 text-base leading-relaxed mb-8 font-light">
+                            <p class="text-gray-600 text-base leading-relaxed mb-8 font-light">
                                 A premier holding company dedicated to driving sustainable economic growth through strategic investments and excellence in execution.
                             </p>
                             
-                            <div class="mt-6 text-sm text-gray-200">
-                                <h4 class="text-white font-medium mb-2">Contact Us</h4>
+                            <div class="mt-6 text-sm text-gray-700">
+                                <h4 class="text-gray-900 font-medium mb-2">Contact Us</h4>
                                 <p class="mb-1">Nabrok Group</p>
                                 <p class="mb-1">P.O. BOX Osu 1325 Osu-Accra Ghana</p>
-                                <p class="mt-2">Call: <a href="tel:+233543229643" class="underline text-white">+233 (0) 54 322 9643</a></p>
-                                <p>Email: <a href="mailto:contact@nabrokgroupgh.com" class="underline text-white">contact@nabrokgroupgh.com</a></p>
+                                <p>Call: <a href="tel:+233543229643" class="underline text-brand-neon">+233 (0) 54 322 9643</a></p>
+                                <p>Email: <a href="mailto:contact@nabrokgroupgh.com" class="underline text-brand-neon">contact@nabrokgroupgh.com</a></p>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 flex-1">
                             <div>
-                                <h4 class="font-medium text-white mb-6">Sectors</h4>
-                                <ul class="space-y-4 text-sm text-gray-400 font-light">
-                                    <li><a href="#" class="hover:text-white transition-colors">Real Estate</a></li>
-                                    <li><a href="#" class="hover:text-white transition-colors">Agriculture</a></li>
-                                    <li><a href="#" class="hover:text-white transition-colors">Logistics</a></li>
-                                    <li><a href="#" class="hover:text-white transition-colors">Investments</a></li>
+                                <h4 class="font-medium text-gray-900 mb-6">Sectors</h4>
+                                <ul class="space-y-4 text-sm text-gray-600 font-light">
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Real Estate</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Agriculture</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Logistics</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Investments</a></li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-medium text-white mb-6">Company</h4>
-                                <ul class="space-y-4 text-sm text-gray-400 font-light">
-                                    <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                                    <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                                    <li><a href="#" class="hover:text-white transition-colors">News & Media</a></li>
-                                    <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                                <h4 class="font-medium text-gray-900 mb-6">Company</h4>
+                                <ul class="space-y-4 text-sm text-gray-600 font-light">
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">About Us</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Careers</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">News & Media</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     </a>
-                    <a href="https://linkedin.com/in/stephenwalkerpersonaltrainer" class="text-zinc-500 hover:text-[#FF6B00] transition-colors" target="_blank">
+                    <a href="https://linkedin.com/in/stephenwalkerpersonaltrainer" class="text-gray-500 hover:text-brand-neon transition-colors" target="_blank">
                         <i data-lucide="linkedin" class="w-6 h-6" stroke-width="1.5"></i>
                     </a>
                 </div>

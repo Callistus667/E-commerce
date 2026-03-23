@@ -1,8 +1,518 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>What We Do | Nabrok Group</title><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="styles.css"></head>
-<body class="bg-[#fafafa] text-gray-900">
-<nav class="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-gray-100"><div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between"><a href="index.html"><img src="nabrok-group-web2.jpg" class="h-9"></a><a href="contact-us.html" class="cta-button px-5 py-2.5 rounded-full text-sm">Contact</a></div></nav>
-<main class="max-w-[1440px] mx-auto px-4 sm:px-6 pb-20">
-<section class="mt-6 min-h-[calc(100vh-6.5rem)] grid lg:grid-cols-12 gap-6"><article class="lg:col-span-7 rounded-3xl bg-white border border-gray-100 p-8 sm:p-12 soft-shadow reveal-on-scroll flex flex-col justify-between"><div><p class="chip inline-flex px-3 py-1 rounded-full text-xs">WHAT WE DO</p><h1 class="text-5xl sm:text-7xl leading-tight mt-4">Build. Scale. Sustain.</h1><p class="text-gray-600 mt-5 text-lg font-light">Nabrok operates across real estate, transport, agriculture, community programs, and clothing.</p></div><div class="grid sm:grid-cols-3 gap-3 mt-8"><div class="bg-gray-50 rounded-xl p-4">Real Estate</div><div class="bg-gray-50 rounded-xl p-4">Transport</div><div class="bg-gray-50 rounded-xl p-4">Agriculture</div></div></article><article class="lg:col-span-5 rounded-3xl overflow-hidden relative"><img src="Real-Estates.webp" class="absolute inset-0 w-full h-full object-cover"><div class="absolute inset-0 bg-black/20"></div></article></section>
-<section class="mt-6 grid md:grid-cols-2 xl:grid-cols-4 gap-4"><article class="rounded-2xl bg-white border border-gray-100 p-6">Portfolio strategy</article><article class="rounded-2xl bg-white border border-gray-100 p-6">Operations management</article><article class="rounded-2xl bg-white border border-gray-100 p-6">Performance tracking</article><article class="rounded-2xl bg-white border border-gray-100 p-6">Community impact</article></section>
-</main><script src="script.js" defer></script></body></html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What We Do | Nabrok Group</title>
+<meta name="description" content="Nabrok Group operates across Agriculture, Transport & Logistics, Real Estate, and more sectors providing relevant services in our areas of operation.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+oswald: ['Oswald', 'sans-serif'],
+},
+colors: {
+brand: {
+base: '#0D0D0D',
+card: '#111111',
+border: 'rgba(255, 255, 255, 0.06)',
+neon: '#FF6B00',
+neonHover: '#FF7A1A',
+}
+},
+letterSpacing: {
+tighter: '-0.04em',
+}
+}
+}
+}
+</script>
+<style>
+body {
+background-color: #FFFFFF;
+color: #374151;
+-webkit-font-smoothing: antialiased;
+}
+.font-oswald {
+font-family: 'Oswald', sans-serif;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F3F4F6; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; }
+::-webkit-scrollbar-thumb:hover { background: #FF6B00; }
+/* Kinetic Typography Animation */
+.word-slider {
+display: inline-flex;
+flex-direction: column;
+height: 1.1em;
+overflow: hidden;
+vertical-align: top;
+position: relative;
+}
+.word-slider-inner {
+animation: slideWords 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+@keyframes slideWords {
+0%, 20% { transform: translateY(0); }
+25%, 45% { transform: translateY(-1.1em); }
+50%, 70% { transform: translateY(-2.2em); }
+75%, 95% { transform: translateY(-3.3em); }
+100% { transform: translateY(-4.4em); }
+}
+/* Abstract Node Network Background */
+.bg-nodes {
+background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+background-size: 40px 40px;
+mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+-webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+}
+/* Scroll Reveal Utility */
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+/* Glowing accents */
+.glow-bottom {
+position: relative;
+}
+.glow-bottom::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 1px;
+background: #FF6B00;
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow: 0 -2px 10px rgba(255, 107, 0, 0.4);
+}
+.glow-bottom:hover::after, .group:hover .glow-bottom::after {
+transform: scaleX(1);
+transform-origin: left;
+}
+/* Custom Input Styling */
+input:focus ~ label, textarea:focus ~ label,
+input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label {
+transform: translateY(-1.5rem) scale(0.85);
+color: #FF6B00;
+}
+</style>
+<style>
+/* 3D Transform utilities */
+</style><!-- aura-ga4-start -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M6V79H761');
+</script>
+<!-- aura-ga4-end -->
+</head>
+<body class="selection:bg-brand-neon/20 selection:text-brand-neon">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-1 z-50">
+                <img src="nabrok-group-web2-removebg-preview.png" alt="Nabrok Group" class="h-8 w-auto">
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-10 text-sm font-light text-gray-600">
+                <a href="index.html" class="hover:text-brand-neon transition-colors duration-300">Home</a>
+                
+                <div class="relative group">
+                    <button class="flex items-center gap-2 text-sm font-light text-gray-600 hover:text-brand-neon transition-colors">
+                        About Us
+                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+                        <a href="our-values.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Our Values</a>
+                        <a href="what-we-do.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What We Do</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Who We Are</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What Makes Us Stand-Out</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="flex items-center gap-2 text-sm font-light text-gray-600 hover:text-brand-neon transition-colors">
+                        Sub-Companies
+                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Prime Nest Ltd</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Transport</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Agro Limited</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Foundation</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Clothing</a>           
+                    </div>
+                </div>
+
+                <a href="#" class="hover:text-brand-neon transition-colors duration-300">Contact</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="lg:hidden text-gray-700 z-50 p-2" id="mobile-menu-btn" aria-label="Menu">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="index.html" class="text-2xl font-light text-gray-800 mobile-link">Home</a>
+            <a href="our-values.html" class="text-2xl font-light text-gray-800 mobile-link">Our Values</a>
+            <a href="what-we-do.html" class="text-2xl font-light text-gray-800 mobile-link">What We Do</a>
+            <a href="#" class="text-2xl font-light text-gray-800 mobile-link">Contact</a>
+            <div class="flex flex-col gap-4 mt-8 w-full px-12 text-center">
+                <a href="#" class="border border-gray-300 py-4 text-sm tracking-widest text-gray-700 uppercase mobile-link">Contact Us</a>
+                <a href="#" class="bg-brand-neon py-4 text-sm tracking-widest text-white uppercase mobile-link">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Abstract Tech Background -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center">
+            <div class="absolute w-[200vw] h-[200vh] bg-nodes opacity-30 rotate-[15deg] animate-[spin_120s_linear_infinite]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/90 to-white"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col items-start pt-12 pb-24">
+            <div class="inline-flex items-center gap-3 mb-8 reveal">
+                <span class="w-1.5 h-1.5 bg-brand-neon rounded-full shadow-[0_0_8px_#FF6B00]"></span>
+                <span class="text-xs uppercase tracking-widest text-gray-600 font-oswald">MULTI-SECTOR ENTERPRISES</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] font-extralight text-gray-900 leading-[1.05] tracking-tighter mb-8 max-w-5xl reveal font-oswald" style="transition-delay: 100ms;">
+                We Build <br class="hidden md:block">
+                Enterprises <br>
+                <span class="text-brand-neon glow-text font-light word-slider">
+                    <span class="word-slider-inner">
+                        <span class="block h-[1.1em]">Sustainably.</span>
+                        <span class="block h-[1.1em]">Innovatively.</span>
+                        <span class="block h-[1.1em]">Strategically.</span>
+                        <span class="block h-[1.1em]">Globally.</span>
+                        <span class="block h-[1.1em]">Sustainably.</span>
+                    </span>
+                </span>
+            </h1>
+            
+            <p class="text-lg md:text-xl font-light text-gray-600 max-w-2xl leading-relaxed mb-12 reveal" style="transition-delay: 200ms;">
+                We run different enterprises in the Agriculture Sector, Transport and Logistics Sector, Real Estate Sector etc. where we provide relevant services in our areas of operation.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 reveal" style="transition-delay: 300ms;">
+                <a href="#services" class="group relative px-8 py-4 bg-brand-neon text-white text-sm uppercase tracking-widest overflow-hidden font-oswald">
+                    <span class="relative z-10 transition-colors group-hover:text-white">Explore Our Sectors</span>
+                    <div class="absolute inset-0 bg-brand-neon transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
+                </a>
+                <a href="#vision" class="group px-8 py-4 border border-gray-300 text-gray-700 text-sm uppercase tracking-widest hover:border-gray-700 transition-colors duration-300 flex items-center gap-3 font-oswald">
+                    Our Vision
+                    <iconify-icon icon="solar:arrow-right-linear" width="18" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+            </div>
+        </div>
+
+   
+    </header>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20 md:w-1/2 reveal">
+                <h2 class="text-4xl md:text-5xl font-extralight text-gray-900 tracking-tighter mb-6 font-oswald">Our Sectors.</h2>
+                <p class="font-light text-gray-600 leading-relaxed text-lg">
+                    Operating across multiple sectors with excellence and innovation, providing relevant services in our areas of operation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="group bg-white border border-gray-200 p-8 reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:border-gray-300">
+                    <div class="w-12 h-12 flex items-center justify-center mb-16 border border-brand-border text-brand-neon transition-colors group-hover:border-brand-neon/30">
+                        <iconify-icon icon="solar:plant-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-normal text-gray-900 mb-3 tracking-tight font-oswald">Agriculture</h3>
+                    <p class="text-sm font-light text-gray-500 leading-relaxed">
+                        Sustainable farming and agricultural solutions for modern challenges with innovative techniques.
+                    </p>
+                    <div class="glow-bottom mt-8"></div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white border border-gray-200 p-8 reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:border-gray-300" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 flex items-center justify-center mb-16 border border-gray-300 text-brand-neon transition-colors group-hover:border-brand-neon/30">
+                        <iconify-icon icon="solar:truck-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-normal text-gray-900 mb-3 tracking-tight font-oswald">Transport & Logistics</h3>
+                    <p class="text-sm font-light text-gray-600 leading-relaxed">
+                        Efficient transportation and logistics solutions for businesses with optimized supply chains.
+                    </p>
+                    <div class="glow-bottom mt-8"></div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white border border-gray-200 p-8 reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:border-gray-300" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 flex items-center justify-center mb-16 border border-gray-300 text-brand-neon transition-colors group-hover:border-brand-neon/30">
+                        <iconify-icon icon="solar:building-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-normal text-gray-900 mb-3 tracking-tight font-oswald">Real Estate</h3>
+                    <p class="text-sm font-light text-gray-600 leading-relaxed">
+                        Property development and real estate investment opportunities with strategic planning.
+                    </p>
+                    <div class="glow-bottom mt-8"></div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white border border-gray-200 p-8 reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:border-gray-300" style="transition-delay: 300ms;">
+                    <div class="w-12 h-12 flex items-center justify-center mb-16 border border-gray-300 text-brand-neon transition-colors group-hover:border-brand-neon/30">
+                        <iconify-icon icon="solar:heart-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-normal text-gray-900 mb-3 tracking-tight font-oswald">Community Programs</h3>
+                    <p class="text-sm font-light text-gray-600 leading-relaxed">
+                        Social impact initiatives and community development programs with meaningful change.
+                    </p>
+                    <div class="glow-bottom mt-8"></div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-white border border-gray-200 p-8 reveal transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:border-gray-300" style="transition-delay: 400ms;">
+                    <div class="w-12 h-12 flex items-center justify-center mb-16 border border-gray-300 text-brand-neon transition-colors group-hover:border-brand-neon/30">
+                        <iconify-icon icon="solar:shirt-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-normal text-gray-900 mb-3 tracking-tight font-oswald">Fashion & Clothing</h3>
+                    <p class="text-sm font-light text-gray-600 leading-relaxed">
+                        Fashion design and clothing manufacturing with innovative brand development.
+                    </p>
+                    <div class="glow-bottom mt-8"></div>
+                </div>
+
+                <!-- Featured Card -->
+                <div class="group bg-brand-neon border border-brand-neon p-8 reveal transition-all duration-500 hover:-translate-y-2 hover:bg-brand-neonHover" style="transition-delay: 500ms;">
+                    <div class="w-12 h-12 flex items-center justify-center mb-16 border border-white/20 text-white transition-colors group-hover:border-white/40">
+                        <iconify-icon icon="solar:zap-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-normal text-white mb-3 tracking-tight font-oswald">Our Approach</h3>
+                    <p class="text-sm font-light text-white/90 leading-relaxed">
+                        Disruptive innovation and industry transformation through visionary thinking.
+                    </p>
+                    <div class="glow-bottom mt-8" style="background: white;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION SECTION -->
+    <section id="vision" class="py-32 relative bg-gradient-to-br from-gray-50 via-white to-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <span class="w-2 h-2 bg-brand-neon rounded-full animate-pulse"></span>
+                        <span class="text-sm uppercase tracking-widest text-brand-neon font-bold font-oswald">ENTREPRENEURIAL VISION</span>
+                        <span class="w-2 h-2 bg-brand-neon rounded-full animate-pulse"></span>
+                    </div>
+                    <h2 class="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 tracking-tighter mb-12 leading-[1.1] font-oswald">
+                        What We Do
+                    </h2>
+                    <p class="text-xl md:text-2xl font-medium text-gray-700 mb-12 leading-relaxed">
+                        We run different enterprises in the <span class="text-brand-neon font-bold">Agriculture Sector</span>, <span class="text-brand-neon font-bold">Transport and Logistics Sector</span>, <span class="text-brand-neon font-bold">Real Estate Sector</span> etc. where we provide relevant services in our areas of operation.
+                    </p>
+
+                    <p class="text-xl md:text-2xl font-medium text-gray-700 mb-12 leading-relaxed">
+                        We are an entrepreneurial team of visionaries. We love to see our business models <span class="text-brand-neon font-bold">incite unique change</span> through the disruption of norms and prevailing industry trends.
+                    </p>
+
+                    <p class="text-xl md:text-2xl font-medium text-gray-700 mb-16 leading-relaxed">
+                        First, we <span class="text-brand-neon font-bold">explore the roots</span> of our target demographics' emotions and motivations, then we <span class="text-brand-neon font-bold">apply that insight</span> in modelling the ideas that influence our operations.
+                    </p>
+
+                    <a href="#services" class="inline-block border-2 border-brand-neon text-brand-neon px-12 py-6 text-lg uppercase tracking-widest font-bold hover:bg-brand-neon hover:text-white transition-all duration-300 font-oswald transform hover:scale-105">
+                        Explore Our Process
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+
+    <!-- STATS SECTION -->
+    <section class="py-32 bg-gray-50 border-y border-gray-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extralight text-gray-900 tracking-tighter mb-6 max-w-3xl mx-auto reveal font-oswald">
+                Building enterprises that transform industries through innovation and strategic vision.
+            </h2>
+            <p class="font-light text-gray-600 max-w-2xl mx-auto mb-20 reveal" style="transition-delay: 100ms;">
+                From entrepreneurial visionaries to industry leaders, we continue to disrupt norms and create unique change across all sectors we operate in.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16 mt-10">
+                <!-- Stat 1 -->
+                <div class="reveal flex flex-col items-center" style="transition-delay: 200ms;">
+                    <span class="text-5xl md:text-7xl font-extralight text-gray-900 tracking-tighter mb-2 font-oswald">5+</span>
+                    <div class="w-8 h-px bg-brand-neon mb-4"></div>
+                    <span class="text-xs uppercase tracking-widest text-gray-600 font-oswald">Sectors</span>
+                </div>
+                <!-- Stat 2 -->
+                <div class="reveal flex flex-col items-center" style="transition-delay: 300ms;">
+                    <span class="text-5xl md:text-7xl font-extralight text-gray-900 tracking-tighter mb-2 font-oswald">100%</span>
+                    <div class="w-8 h-px bg-brand-neon mb-4"></div>
+                    <span class="text-xs uppercase tracking-widest text-gray-600 font-oswald">Innovation Focus</span>
+                </div>
+                <!-- Stat 3 -->
+                <div class="reveal flex flex-col items-center" style="transition-delay: 400ms;">
+                    <span class="text-5xl md:text-7xl font-extralight text-gray-900 tracking-tighter mb-2 font-oswald">24/7</span>
+                    <div class="w-8 h-px bg-brand-neon mb-4"></div>
+                    <span class="text-xs uppercase tracking-widest text-gray-600 font-oswald">Operations</span>
+                </div>
+                <!-- Stat 4 -->
+                <div class="reveal flex flex-col items-center" style="transition-delay: 500ms;">
+                    <span class="text-5xl md:text-7xl font-extralight text-gray-900 tracking-tighter mb-2 font-oswald">∞</span>
+                    <div class="w-8 h-px bg-brand-neon mb-4"></div>
+                    <span class="text-xs uppercase tracking-widest text-gray-600 font-oswald">Potential</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Footer -->
+        <div class="relative mt-24 sm:mt-32">
+            <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-pink-500/20 rounded-[5px] sm:rounded-[20px] blur-2xl opacity-40"></div>
+
+            <footer class="relative bg-white rounded-[40px] sm:rounded-[60px] overflow-hidden text-gray-900 shadow-2xl ring-1 ring-gray-200 reveal-on-scroll">
+                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+                <div class="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[350px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
+
+                <div class="px-8 py-8 sm:px-16 sm:py-12 relative z-10">
+                    <div class="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
+                        <div class="max-w-sm">
+                            <a href="#" class="text-2xl font-medium tracking-tighter text-gray-900 flex items-center gap-1 mb-6">
+                                NABROK
+                            </a>
+                            <p class="text-gray-600 text-base leading-relaxed mb-8 font-light">
+                                A premier holding company dedicated to driving sustainable economic growth through strategic investments and excellence in execution.
+                            </p>
+                            
+                            <div class="mt-6 text-sm text-gray-700">
+                                <h4 class="text-gray-900 font-medium mb-2">Contact Us</h4>
+                                <p class="mb-1">Nabrok Group</p>
+                                <p class="mb-1">P.O. BOX Osu 1325 Osu-Accra Ghana</p>
+                                <p class="mt-2">Call: <a href="tel:+233543229643" class="underline text-brand-neon">+233 (0) 54 322 9643</a></p>
+                                <p>Email: <a href="mailto:contact@nabrokgroupgh.com" class="underline text-brand-neon">contact@nabrokgroupgh.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 flex-1">
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-6">Sectors</h4>
+                                <ul class="space-y-4 text-sm text-gray-600 font-light">
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Real Estate</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Agriculture</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Logistics</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Investments</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-6">Company</h4>
+                                <ul class="space-y-4 text-sm text-gray-600 font-light">
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">About Us</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Careers</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">News & Media</a></li>
+                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="https://linkedin.com/in/stephenwalkerpersonaltrainer" class="text-gray-500 hover:text-brand-neon transition-colors" target="_blank">
+                        <i data-lucide="linkedin" class="w-6 h-6" stroke-width="1.5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = 'hidden';
+                menuBtn.innerHTML = '<iconify-icon icon="solar:close-square-linear" width="24" height="24"></iconify-icon>';
+            } else {
+                closeMenu();
+            }
+        });
+
+        function closeMenu() {
+            menuOpen = false;
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'auto';
+            menuBtn.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>';
+        }
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Scroll Reveal
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
