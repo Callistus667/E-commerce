@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script>
+try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral="1fd2949a-d22c-431b-92bf-02d4ad04ee24";window.parent.document.cookie="promotekit_referral=1fd2949a-d22c-431b-92bf-02d4ad04ee24;path=/;domain=.aura.build;max-age=31536000"}}catch(e){}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabrok Group – Real Estate | Transport | Agricultur</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+* { font-family: 'Inter', sans-serif; }
+.serif { font-family: 'DM Serif Display', serif; }
+.marquee { animation: marquee 30s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; }
+/* Word mask reveal */
+.reveal-block { overflow: hidden; display: inline-block; line-height: 1.1; }
+.reveal-word { display: inline-block; transform: translateY(110%); opacity: 0; }
+/* Parallax container */
+.parallax-bg { will-change: transform; }
+/* Typography */
+.display-num { font-family: 'DM Serif Display', serif; font-size: clamp(4rem, 12vw, 9rem); line-height: 1; letter-spacing: -0.03em; }
+.hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(5rem, 15vw, 13rem); line-height: 0.92; letter-spacing: -0.03em; }
+.section-title { font-family: 'DM Serif Display', serif; font-size: clamp(3rem, 7vw, 6rem); line-height: 1; letter-spacing: -0.025em; }
+.line-mask { overflow: hidden; display: block; }
+.img-reveal-wrapper { overflow: hidden; }
+.img-reveal-inner { transform: scale(1.12); will-change: transform; }
+.tag-pill { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid #d4d4d4; border-radius: 999px; padding: 0.3rem 0.85rem; color: #737373; display: inline-block; }
+.nav-link { position: relative; overflow: hidden; }
+.nav-link::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 1px; background: #171717; transform: translateX(-101%); transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1); }
+.nav-link:hover::after { transform: translateX(0); }
+.service-card { transition: background 0.3s ease, border-color 0.3s ease; }
+.service-card:hover { background: #fafafa; }
+.exp-row { transition: padding-left 0.3s ease; }
+.exp-row:hover { padding-left: 1.5rem; }
+html { scroll-behavior: smooth; }
+.portfolio-item .overlay { opacity: 0; transition: opacity 0.4s ease; }
+.portfolio-item:hover .overlay { opacity: 1; }
+.portfolio-item:hover .img-reveal-inner { transform: scale(1.06) !important; transition: transform 0.7s ease; }
+/* WebGL Container */
+#webgl-hero {
+mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+-webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+</style><!-- aura-ga4-start -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M6V79H761');
+</script>
+<!-- aura-ga4-end -->
+</head>
+<body class="bg-white text-neutral-900 antialiased overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-transparent">
+    <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Left: Wordmark -->
+      <div class="flex-shrink-0">
+        <a href="#" class="flex items-center gap-3">
+          <img src="nabrok-group-web2.jpg" alt="Nabrok Group" class="h-8 w-auto">
+        </a>
+      </div>
+
+      <!-- Center: Links with hover dropdowns -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-base font-light text-gray-600 hover:text-black transition-colors">Home</a>
+
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-base font-light text-gray-600 hover:text-black transition-colors">
+            About Us
+            <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+            <a href="our-values.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Our Values</a>
+            <a href="what-we-do.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What We Do</a>
+            <a href="Who-we-are.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Who We Are</a>
+            <a href="What-makes-us-standout.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What Makes Us Stand-Out</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-base font-light text-gray-600 hover:text-black transition-colors">
+            Sub-Companies
+            <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Prime Nest Ltd</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Transport</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Agro Limited</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Foundation</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Clothing</a>           
+          </div>
+        </div>
+
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-base font-light text-gray-600 hover:text-black transition-colors">
+            Galleries
+            <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Properties Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Transport Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Farm Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Foundation Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Clothing Gallery</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-base font-light text-gray-600 hover:text-black transition-colors">Publications</a>
+        <a href="#" class="text-base font-light text-gray-600 hover:text-black transition-colors">Contact Us</a>
+      </div>
+
+      <!-- Right: Icons -->
+      <div class="flex items-center gap-5">
+
+        <button class="text-gray-600 hover:text-black transition-colors md:hidden">
+          <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-end relative overflow-hidden bg-white pt-16">
+    <!-- WebGL Canvas in Top Right -->
+    <div id="webgl-hero" class="absolute top-0 right-0 w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] z-0 opacity-[0.35] pointer-events-none mix-blend-darken grayscale"></div>
+
+    <!-- Parallax background image -->
+    <div class="absolute inset-0 z-0 parallax-bg" id="heroBg">
+      <div class="img-reveal-wrapper w-full h-full">
+        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/af66ba5d-69b1-41c6-b463-40f48d0134da_1600w.webp" alt="Profile" class="w-full h-full object-cover object-top grayscale opacity-5 img-reveal-inner scale-110" id="heroBgImg">
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-[1400px] mx-auto px-8 pb-16 w-full">
+      <!-- Available badge -->
+      <div class="mb-10 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#FF6B00] inline-block"></span>
+        <span class="tag-pill" style="border:none; padding:0; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#737373;">Growing Strong</span>
+      </div>
+
+      <!-- Main headline -->
+      <div class="hero-title text-neutral-900 mb-12">
+        <div class="line-mask"><span class="reveal-word inline-block serif" data-hero="">Business</span></div>
+        <div class="line-mask flex items-end gap-6 flex-wrap">
+          <span class="reveal-word inline-block serif text-[#FF6B00]" data-hero="">Excellence</span>
+          <span class="reveal-word inline-block" data-hero="" style="font-size: clamp(1rem, 2.5vw, 1.75rem); font-weight:300; color:#737373; margin-bottom: clamp(0.6rem, 1.2vw, 1.2rem); letter-spacing:-0.01em; max-width:260px; line-height:1.4;">Driving <span class="text-[#FF6B00]">sustainable growth</span> across multiple sectors</span>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pt-10 border-t border-neutral-200">
+        <div class="flex items-center gap-8">
+          <div>
+            <p class="text-xs uppercase tracking-widest text-neutral-400 mb-1">Founded</p>
+            <p class="text-sm font-medium">2019</p>
+          </div>
+          <div class="w-px h-8 bg-neutral-200"></div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-neutral-400 mb-1">Sectors</p>
+            <p class="text-sm font-medium">5+</p>
+          </div>
+          <div class="w-px h-8 bg-neutral-200"></div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-neutral-400 mb-1">Countries</p>
+            <p class="text-sm font-medium">Ghana & Growing</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-neutral-500">
+          <span>Scroll to explore</span>
+          <iconify-icon icon="solar:arrow-down-linear" width="16" height="16" style="stroke-width:1.5"></iconify-icon>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO TICKER -->
+  <div class="border-y border-neutral-100 py-12 overflow-hidden bg-[#FF6B00]">
+    <div class="marquee-track marquee">
+      <div class="flex items-center gap-24 px-12 opacity-90 text-white">
+        <span class="text-2xl font-bold">Real Estate</span>
+        <span class="text-2xl font-bold">Agriculture</span>
+        <span class="text-2xl font-bold">Transport</span>
+        <span class="text-2xl font-bold">Foundation</span>
+        <span class="text-2xl font-bold">Clothing</span>
+        <span class="text-2xl font-bold">Investments</span>
+      </div>
+      <div class="flex items-center gap-24 px-12 opacity-90 text-white">
+        <span class="text-2xl font-bold">Real Estate</span>
+        <span class="text-2xl font-bold">Agriculture</span>
+        <span class="text-2xl font-bold">Transport</span>
+        <span class="text-2xl font-bold">Foundation</span>
+        <span class="text-2xl font-bold">Clothing</span>
+        <span class="text-2xl font-bold">Investments</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT US -->
+  <section class="max-w-[1400px] mx-auto px-8 py-28 reveal-section">
+    <div class="mb-12">
+      <span class="tag-pill" style="background: #FF6B00; color: white;">About Us</span>
+    </div>
+    <div class="grid md:grid-cols-12 gap-10 items-start mb-20">
+      <div class="md:col-span-7">
+        <h2 class="section-title serif reveal-text">Nabrok Group is a cluster of different home-grown enterprises focused on the provision of excellent services for key business areas.</h2>
+        <p class="text-lg text-neutral-600 leading-relaxed mt-6 reveal-fade">Our businesses focus on Agriculture, Real Estate, Transport, Home Decorations, Fashion and More. We have an indepth understanding of current trends in business development and have set out to make impact on our clients and by extension on Ghanaian business ecosystem.</p>
+        <p class="text-lg text-neutral-600 leading-relaxed mt-6 reveal-fade">Backed by the expertise of a world class team of professionals, we are poised to strategically place ourselves for business in Sub-Saharan market, having already established a firm base for our brands locally.</p>
+      </div>
+      <div class="md:col-span-4 md:col-start-9 pt-4">
+        <p class="text-base text-neutral-500 leading-relaxed reveal-fade">Business is not just about profit for us; it's about creating sustainable value that fuels every decision we make. We believe great business is transformative — it simply works, creates impact, and moves communities forward.</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Image -->
+      <div class="relative rounded-3xl overflow-hidden bg-neutral-100 aspect-video group img-reveal-wrapper">
+        <img src="Nabrok_Group_pic.jpg" alt="About Nabrok Group" class="w-full h-full object-cover img-reveal-inner transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+            <iconify-icon icon="solar:play-bold" width="24" height="24" class="text-neutral-900 ml-1"></iconify-icon>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-col justify-center gap-0 pl-6">
+        <div class="border-b border-neutral-100 pb-10 mb-10">
+          <p class="display-num serif reveal-num text-[#FF6B00]">5+</p>
+          <p class="text-base text-neutral-500 mt-3 leading-relaxed max-w-xs reveal-fade">Business sectors driving economic growth.</p>
+        </div>
+        <div>
+          <p class="display-num serif reveal-num text-[#FF6B00]">2019</p>
+          <p class="text-base text-neutral-500 mt-3 leading-relaxed max-w-xs reveal-fade">Founded with a vision for sustainable excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="max-w-[1400px] mx-auto px-8 py-28 border-t border-neutral-100 reveal-section">
+    <div class="mb-12">
+      <span class="tag-pill" style="background: #FF6B00; color: white;">Sectors</span>
+    </div>
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-6">
+        <h2 class="section-title serif reveal-text">What we bring to the table</h2>
+      </div>
+      <div class="md:col-span-4 md:col-start-9 flex flex-col justify-end">
+        <p class="text-base text-neutral-500 leading-relaxed reveal-fade">A comprehensive look at our business sectors and how we deliver value — from strategy to excellence in execution.</p>
+        <button class="mt-6 self-start text-sm border border-neutral-900 rounded-full px-5 py-2.5 text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300 font-normal reveal-fade">View All Sectors</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200 rounded-3xl overflow-hidden">
+      <!-- Social Ads -->
+      <div class="service-card bg-white p-10 flex flex-col justify-between min-h-56 group">
+        <div class="flex items-start justify-between">
+          <h3 class="text-xl font-semibold text-[#FF6B00]">Real Estate</h3>
+          <div class="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center group-hover:bg-neutral-900 group-hover:text-white transition-all duration-300">
+            <iconify-icon icon="solar:arrow-right-linear" width="16" height="16" style="stroke-width:1.5"></iconify-icon>
+          </div>
+        </div>
+        <p class="text-sm text-neutral-500 mt-6 leading-relaxed max-w-xs">Prime properties and strategic real estate investments that create lasting value and community impact.</p>
+      </div>
+
+      <!-- Agriculture -->
+      <div class="service-card bg-white p-10 flex flex-col justify-between min-h-56 group">
+        <div class="flex items-start justify-between">
+          <h3 class="text-xl font-semibold text-[#FF6B00]">Agriculture</h3>
+          <div class="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center group-hover:bg-neutral-900 group-hover:text-white transition-all duration-300">
+            <iconify-icon icon="solar:arrow-right-linear" width="16" height="16" style="stroke-width:1.5"></iconify-icon>
+          </div>
+        </div>
+        <p class="text-sm text-neutral-500 mt-6 leading-relaxed max-w-xs">Sustainable farming practices and agricultural innovations that ensure food security and economic growth.</p>
+      </div>
+
+      <!-- Transport - Featured -->
+      <div class="bg-neutral-950 text-white p-10 flex flex-col justify-between min-h-56 group">
+        <div class="flex items-start justify-between">
+          <h3 class="text-xl font-semibold text-white">Transport</h3>
+          <div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-neutral-900 transition-all duration-300">
+            <iconify-icon icon="solar:arrow-right-up-linear" width="16" height="16" class="text-white group-hover:text-neutral-900" style="stroke-width:1.5"></iconify-icon>
+          </div>
+        </div>
+        <p class="text-sm text-neutral-400 mt-6 leading-relaxed max-w-xs">Efficient logistics and transportation solutions that connect businesses and communities across regions.</p>
+      </div>
+
+      <!-- Foundation -->
+      <div class="service-card bg-white p-10 flex flex-col justify-between min-h-56 group">
+        <div class="flex items-start justify-between">
+          <h3 class="text-xl font-semibold text-[#FF6B00]">Foundation</h3>
+          <div class="w-9 h-9 bg-[#FF6B00]/10 rounded-full flex items-center justify-center group-hover:bg-[#FF6B00] group-hover:text-white transition-all duration-300">
+            <iconify-icon icon="solar:arrow-right-linear" width="16" height="16" style="stroke-width:1.5"></iconify-icon>
+          </div>
+        </div>
+        <p class="text-sm text-neutral-500 mt-6 leading-relaxed max-w-xs">Community development initiatives and charitable programs that create positive social impact and empower lives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="max-w-[1400px] mx-auto px-8 py-28 border-t border-neutral-100 reveal-section">
+    <div class="mb-12">
+      <span class="tag-pill" style="background: #FF6B00; color: white;">Our Journey</span>
+    </div>
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-6">
+        <h2 class="section-title serif reveal-text">Years of sustainable growth</h2>
+      </div>
+      <div class="md:col-span-4 md:col-start-9 flex items-end">
+        <p class="text-base text-neutral-500 leading-relaxed reveal-fade">Our journey of expansion and impact across multiple sectors, building a foundation for lasting success.</p>
+      </div>
+    </div>
+
+    <div class="divide-y divide-neutral-100">
+      <div class="exp-row py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 group reveal-exp">
+        <div class="flex items-center gap-6 flex-1">
+          <span class="tag-pill shrink-0" style="background: #FF6B00; color: white;">01</span>
+          <div>
+            <h3 class="text-lg font-semibold">Foundation Established</h3>
+            <p class="text-sm text-neutral-500 mt-1 leading-relaxed max-w-md">Nabrok Group founded with vision for sustainable business excellence.</p>
+          </div>
+        </div>
+        <p class="serif text-3xl md:text-5xl tracking-tight text-[#FF6B00] group-hover:text-neutral-900 transition-colors duration-300 shrink-0" style="letter-spacing:-0.03em;">2019</p>
+      </div>
+
+      <div class="exp-row py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 group reveal-exp">
+        <div class="flex items-center gap-6 flex-1">
+          <span class="tag-pill shrink-0" style="background: #FF6B00; color: white;">02</span>
+          <div>
+            <h3 class="text-lg font-semibold">Real Estate Launch</h3>
+            <p class="text-sm text-neutral-500 mt-1 leading-relaxed max-w-md">Prime Nest Ltd established to deliver quality real estate solutions.</p>
+          </div>
+        </div>
+        <p class="serif text-3xl md:text-5xl tracking-tight text-[#FF6B00] group-hover:text-neutral-900 transition-colors duration-300 shrink-0" style="letter-spacing:-0.03em;">2020</p>
+      </div>
+
+      <div class="exp-row py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 group reveal-exp">
+        <div class="flex items-center gap-6 flex-1">
+          <span class="tag-pill shrink-0" style="background: #FF6B00; color: white;">03</span>
+          <div>
+            <h3 class="text-lg font-semibold">Agriculture Expansion</h3>
+            <p class="text-sm text-neutral-500 mt-1 leading-relaxed max-w-md">Nabrok Agro Limited launched to advance sustainable farming practices.</p>
+          </div>
+        </div>
+        <p class="serif text-3xl md:text-5xl tracking-tight text-[#FF6B00] group-hover:text-neutral-900 transition-colors duration-300 shrink-0" style="letter-spacing:-0.03em;">2021</p>
+      </div>
+
+      <div class="exp-row py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 group reveal-exp">
+        <div class="flex items-center gap-6 flex-1">
+          <span class="tag-pill shrink-0" style="background: #FF6B00; color: white;">04</span>
+          <div>
+            <h3 class="text-lg font-semibold">Transport & Foundation</h3>
+            <p class="text-sm text-neutral-500 mt-1 leading-relaxed max-w-md">Logistics solutions and charitable initiatives launched to complete our ecosystem.</p>
+          </div>
+        </div>
+        <p class="serif text-3xl md:text-5xl tracking-tight text-neutral-300 group-hover:text-neutral-900 transition-colors duration-300 shrink-0" style="letter-spacing:-0.03em;">2022</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <div class="relative mt-24 sm:mt-32">
+      <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-pink-500/20 rounded-[5px] sm:rounded-[20px] blur-2xl opacity-40"></div>
+
+      <footer class="relative bg-[#0A0A0B] rounded-[40px] sm:rounded-[60px] overflow-hidden text-white shadow-2xl ring-1 ring-white/10 reveal-on-scroll">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div class="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[350px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
+
+        <div class="px-8 py-8 sm:px-16 sm:py-12 relative z-10">
+          <div class="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
+            <div class="max-w-sm">
+              <a href="#" class="text-2xl font-medium tracking-tighter text-white flex items-center gap-1 mb-6">
+                NABROK
+              </a>
+              <p class="text-gray-400 text-base leading-relaxed mb-8 font-light">
+                A premier holding company dedicated to driving sustainable economic growth through strategic investments and excellence in execution.
+              </p>
+              
+              <div class="mt-6 text-sm text-gray-200">
+                <h4 class="text-white font-medium mb-2">Contact Us</h4>
+                <p class="mb-1">Nabrok Group</p>
+                <p class="mb-1">P.O. BOX Osu 1325 Osu-Accra Ghana</p>
+                <p class="mt-2">Call: <a href="tel:+233543229643" class="underline text-white">+233 (0) 54 322 9643</a></p>
+                <p>Email: <a href="mailto:contact@nabrokgroupgh.com" class="underline text-white">contact@nabrokgroupgh.com</a></p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 flex-1">
+              <div>
+                <h4 class="font-medium text-white mb-6">Sectors</h4>
+                <ul class="space-y-4 text-sm text-gray-400 font-light">
+                  <li><a href="#" class="hover:text-white transition-colors">Real Estate</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Agriculture</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Logistics</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Investments</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-medium text-white mb-6">Company</h4>
+                <ul class="space-y-4 text-sm text-gray-400 font-light">
+                  <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">News &amp; Media</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <p class="text-sm text-gray-500 font-light">
+              © 2024 Nabrok Group. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-sm text-gray-500 font-light">
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 opacity-[0.02] select-none pointer-events-none whitespace-nowrap">
+          <span class="text-9xl scale-150 font-medium tracking-tighter leading-none inline-block mt-20">
+            NABROK GROUP
+          </span>
+        </div>
+      </footer>
+  <script>
+    // Lucide & GSAP Init
+    lucide.createIcons();
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* ─── WEBGL SCENE ─── */
+    const initWebGL = () => {
+      const container = document.getElementById('webgl-hero');
+      if (!container) return;
+      
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+      
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      
+      renderer.setSize(width, height);
+      container.appendChild(renderer.domElement);
+      
+      // Geometry: Complex wireframe shape
+      const geometry = new THREE.IcosahedronGeometry(2, 2); 
+      const material = new THREE.MeshBasicMaterial({ 
+        color: 0x171717, 
+        wireframe: true,
+        transparent: true,
+        opacity: 0.3
+      });
+      const sphere = new THREE.Mesh(geometry, material);
+      scene.add(sphere);
+      
+      camera.position.z = 5;
+      
+      // Mouse interaction variables
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetX = 0;
+      let targetY = 0;
+      
+      const windowHalfX = window.innerWidth / 2;
+      const windowHalfY = window.innerHeight / 2;
+      
+      document.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX - windowHalfX);
+        mouseY = (event.clientY - windowHalfY);
+      });
+      
+      function animate() {
+        requestAnimationFrame(animate);
+        
+        targetX = mouseX * 0.001;
+        targetY = mouseY * 0.001;
+        
+        sphere.rotation.y += 0.003;
+        sphere.rotation.x += 0.002;
+        
+        // Gentle follow mouse
+        sphere.rotation.y += 0.05 * (targetX - sphere.rotation.y);
+        sphere.rotation.x += 0.05 * (targetY - sphere.rotation.x);
+        
+        renderer.render(scene, camera);
+      }
+      
+      animate();
+      
+      window.addEventListener('resize', () => {
+        const newWidth = container.clientWidth;
+        const newHeight = container.clientHeight;
+        renderer.setSize(newWidth, newHeight);
+        camera.aspect = newWidth / newHeight;
+        camera.updateProjectionMatrix();
+      });
+    };
+    
+    // Defer WebGL init
+    window.addEventListener('load', initWebGL);
+
+    /* ─── ANIMATIONS ─── */
+    const heroWords = document.querySelectorAll('[data-hero]');
+    gsap.to(heroWords, {
+      y: 0,
+      opacity: 1,
+      duration: 1.1,
+      ease: 'power4.out',
+      stagger: 0.14,
+      delay: 0.3
+    });
+
+    function splitAndReveal(el) {
+      const text = el.innerText;
+      const words = text.split(' ');
+      el.innerHTML = words.map(w =>
+        `<span class="line-mask" style="display:inline-block; overflow:hidden; vertical-align:bottom; margin-right:0.25em; margin-bottom:0.05em;">
+           <span class="reveal-word" style="display:inline-block;">${w}</span>
+         </span>`
+      ).join('');
+      const revealWords = el.querySelectorAll('.reveal-word');
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 82%',
+        onEnter: () => {
+          gsap.to(revealWords, { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', stagger: 0.06 });
+        },
+        once: true
+      });
+    }
+
+    document.querySelectorAll('.reveal-text').forEach(el => splitAndReveal(el));
+
+    document.querySelectorAll('.reveal-fade').forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 28 },
+        {
+          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%', once: true }
+        }
+      );
+    });
+
+    document.querySelectorAll('.reveal-num').forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1, y: 0, duration: 1.0, ease: 'power4.out',
+          scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+        }
+      );
+    });
+
+    document.querySelectorAll('.reveal-exp').forEach((el, i) => {
+      gsap.fromTo(el,
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1, x: 0, duration: 0.75, ease: 'power3.out',
+          delay: i * 0.08,
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        }
+      );
+    });
+
+    gsap.to('#heroBgImg', {
+      y: '22%', ease: 'none',
+      scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: true }
+    });
+
+    gsap.to('#ctaBgImg', {
+      y: '-15%', ease: 'none',
+      scrollTrigger: { trigger: '#ctaBg', start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+
+    document.querySelectorAll('.portfolio-item .img-reveal-inner').forEach(img => {
+      gsap.fromTo(img,
+        { scale: 1.12 },
+        {
+          scale: 1, ease: 'none',
+          scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: true }
+        }
+      );
+    });
+
+  </script>
+
+</body>
+</html>
+                                                                                                            

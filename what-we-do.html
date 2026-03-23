@@ -121,69 +121,74 @@ gtag('config', 'G-2M6V79H761');
 </head>
 <body class="selection:bg-brand-neon/20 selection:text-brand-neon">
 
-    <!-- NAVIGATION -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-1 z-50">
-                <img src="nabrok-group-web2-removebg-preview.png" alt="Nabrok Group" class="h-8 w-auto">
-            </a>
-            
-            <!-- Desktop Links -->
-            <div class="hidden lg:flex items-center gap-10 text-sm font-light text-gray-600">
-                <a href="index.html" class="hover:text-brand-neon transition-colors duration-300">Home</a>
-                
-                <div class="relative group">
-                    <button class="flex items-center gap-2 text-sm font-light text-gray-600 hover:text-brand-neon transition-colors">
-                        About Us
-                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
-                    </button>
-                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
-                        <a href="our-values.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Our Values</a>
-                        <a href="what-we-do.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What We Do</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Who We Are</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What Makes Us Stand-Out</a>
-                    </div>
-                </div>
+    <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-transparent">
+    <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Left: Wordmark -->
+      <div class="flex-shrink-0">
+        <a href="#" class="flex items-center gap-3">
+          <img src="nabrok-group-web2.jpg" alt="Nabrok Group" class="h-8 w-auto">
+        </a>
+      </div>
 
-                <div class="relative group">
-                    <button class="flex items-center gap-2 text-sm font-light text-gray-600 hover:text-brand-neon transition-colors">
-                        Sub-Companies
-                        <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
-                    </button>
-                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Prime Nest Ltd</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Transport</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Agro Limited</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Foundation</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Clothing</a>           
-                    </div>
-                </div>
+      <!-- Center: Links with hover dropdowns -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-base font-light text-gray-600 hover:text-black transition-colors">Home</a>
 
-                <a href="#" class="hover:text-brand-neon transition-colors duration-300">Contact</a>
-            </div>
-
-            <div class="hidden lg:flex items-center gap-4">
-            </div>
-            
-            <!-- Mobile Menu Toggle -->
-            <button class="lg:hidden text-gray-700 z-50 p-2" id="mobile-menu-btn" aria-label="Menu">
-                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
-            </button>
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-base font-light text-gray-600 hover:text-black transition-colors">
+            About Us
+            <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+            <a href="our-values.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Our Values</a>
+            <a href="what-we-do.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What We Do</a>
+            <a href="Who-we-are.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Who We Are</a>
+            <a href="What-makes-us-standout.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">What Makes Us Stand-Out</a>
+          </div>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
-            <a href="index.html" class="text-2xl font-light text-gray-800 mobile-link">Home</a>
-            <a href="our-values.html" class="text-2xl font-light text-gray-800 mobile-link">Our Values</a>
-            <a href="what-we-do.html" class="text-2xl font-light text-gray-800 mobile-link">What We Do</a>
-            <a href="#" class="text-2xl font-light text-gray-800 mobile-link">Contact</a>
-            <div class="flex flex-col gap-4 mt-8 w-full px-12 text-center">
-                <a href="#" class="border border-gray-300 py-4 text-sm tracking-widest text-gray-700 uppercase mobile-link">Contact Us</a>
-                <a href="#" class="bg-brand-neon py-4 text-sm tracking-widest text-white uppercase mobile-link">Partner With Us</a>
-            </div>
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-base font-light text-gray-600 hover:text-black transition-colors">
+            Sub-Companies
+            <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Prime Nest Ltd</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Transport</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Agro Limited</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Foundation</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Nabrok Clothing</a>           
+          </div>
         </div>
-    </nav>
+
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-base font-light text-gray-600 hover:text-black transition-colors">
+            Galleries
+            <svg class="w-3 h-3 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Properties Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Transport Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Farm Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Foundation Gallery</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded">Clothing Gallery</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-base font-light text-gray-600 hover:text-black transition-colors">Publications</a>
+        <a href="#" class="text-base font-light text-gray-600 hover:text-black transition-colors">Contact Us</a>
+      </div>
+
+      <!-- Right: Icons -->
+      <div class="flex items-center gap-5">
+
+        <button class="text-gray-600 hover:text-black transition-colors md:hidden">
+          <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </nav>
 
     <!-- HERO SECTION -->
     <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -393,107 +398,74 @@ gtag('config', 'G-2M6V79H761');
 
 
         <!-- Footer -->
-        <div class="relative mt-24 sm:mt-32">
-            <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-pink-500/20 rounded-[5px] sm:rounded-[20px] blur-2xl opacity-40"></div>
+    <div class="relative mt-24 sm:mt-32">
+      <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-pink-500/20 rounded-[5px] sm:rounded-[20px] blur-2xl opacity-40"></div>
 
-            <footer class="relative bg-white rounded-[40px] sm:rounded-[60px] overflow-hidden text-gray-900 shadow-2xl ring-1 ring-gray-200 reveal-on-scroll">
-                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-                <div class="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[350px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
+      <footer class="relative bg-[#0A0A0B] rounded-[40px] sm:rounded-[60px] overflow-hidden text-white shadow-2xl ring-1 ring-white/10 reveal-on-scroll">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div class="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[350px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
 
-                <div class="px-8 py-8 sm:px-16 sm:py-12 relative z-10">
-                    <div class="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
-                        <div class="max-w-sm">
-                            <a href="#" class="text-2xl font-medium tracking-tighter text-gray-900 flex items-center gap-1 mb-6">
-                                NABROK
-                            </a>
-                            <p class="text-gray-600 text-base leading-relaxed mb-8 font-light">
-                                A premier holding company dedicated to driving sustainable economic growth through strategic investments and excellence in execution.
-                            </p>
-                            
-                            <div class="mt-6 text-sm text-gray-700">
-                                <h4 class="text-gray-900 font-medium mb-2">Contact Us</h4>
-                                <p class="mb-1">Nabrok Group</p>
-                                <p class="mb-1">P.O. BOX Osu 1325 Osu-Accra Ghana</p>
-                                <p class="mt-2">Call: <a href="tel:+233543229643" class="underline text-brand-neon">+233 (0) 54 322 9643</a></p>
-                                <p>Email: <a href="mailto:contact@nabrokgroupgh.com" class="underline text-brand-neon">contact@nabrokgroupgh.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 flex-1">
-                            <div>
-                                <h4 class="font-medium text-gray-900 mb-6">Sectors</h4>
-                                <ul class="space-y-4 text-sm text-gray-600 font-light">
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Real Estate</a></li>
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Agriculture</a></li>
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Logistics</a></li>
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Investments</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-900 mb-6">Company</h4>
-                                <ul class="space-y-4 text-sm text-gray-600 font-light">
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">About Us</a></li>
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Careers</a></li>
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">News & Media</a></li>
-                                    <li><a href="#" class="hover:text-brand-neon transition-colors">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                    <a href="https://linkedin.com/in/stephenwalkerpersonaltrainer" class="text-gray-500 hover:text-brand-neon transition-colors" target="_blank">
-                        <i data-lucide="linkedin" class="w-6 h-6" stroke-width="1.5"></i>
-                    </a>
-                </div>
+        <div class="px-8 py-8 sm:px-16 sm:py-12 relative z-10">
+          <div class="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
+            <div class="max-w-sm">
+              <a href="#" class="text-2xl font-medium tracking-tighter text-white flex items-center gap-1 mb-6">
+                NABROK
+              </a>
+              <p class="text-gray-400 text-base leading-relaxed mb-8 font-light">
+                A premier holding company dedicated to driving sustainable economic growth through strategic investments and excellence in execution.
+              </p>
+              
+              <div class="mt-6 text-sm text-gray-200">
+                <h4 class="text-white font-medium mb-2">Contact Us</h4>
+                <p class="mb-1">Nabrok Group</p>
+                <p class="mb-1">P.O. BOX Osu 1325 Osu-Accra Ghana</p>
+                <p class="mt-2">Call: <a href="tel:+233543229643" class="underline text-white">+233 (0) 54 322 9643</a></p>
+                <p>Email: <a href="mailto:contact@nabrokgroupgh.com" class="underline text-white">contact@nabrokgroupgh.com</a></p>
+              </div>
             </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 flex-1">
+              <div>
+                <h4 class="font-medium text-white mb-6">Sectors</h4>
+                <ul class="space-y-4 text-sm text-gray-400 font-light">
+                  <li><a href="#" class="hover:text-white transition-colors">Real Estate</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Agriculture</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Logistics</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Investments</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-medium text-white mb-6">Company</h4>
+                <ul class="space-y-4 text-sm text-gray-400 font-light">
+                  <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">News &amp; Media</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <p class="text-sm text-gray-500 font-light">
+              © 2024 Nabrok Group. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-sm text-gray-500 font-light">
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+          </div>
         </div>
-    </footer>
+
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 opacity-[0.02] select-none pointer-events-none whitespace-nowrap">
+          <span class="text-9xl scale-150 font-medium tracking-tighter leading-none inline-block mt-20">
+            NABROK GROUP
+          </span>
+        </div>
+      </footer>
+    </div>
 
     <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('py-2');
-                navbar.classList.remove('py-4');
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-2');
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Mobile Menu
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        let menuOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
-                document.body.style.overflow = 'hidden';
-                menuBtn.innerHTML = '<iconify-icon icon="solar:close-square-linear" width="24" height="24"></iconify-icon>';
-            } else {
-                closeMenu();
-            }
-        });
-
-        function closeMenu() {
-            menuOpen = false;
-            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
-            document.body.style.overflow = 'auto';
-            menuBtn.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>';
-        }
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
         // Scroll Reveal
         const observerOptions = {
             root: null,

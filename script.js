@@ -1,121 +1,174 @@
-if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-
-window.addEventListener("pageshow", () => window.scrollTo(0, 0));
-
-function throttle(fn, wait) {
-  let pending = false;
-  return function throttled() {
-    if (pending) return;
-    pending = true;
-    requestAnimationFrame(() => {
-      fn();
-      setTimeout(() => {
-        pending = false;
-      }, wait);
-    });
-  };
+// Prevent browser from restoring scroll
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = document.querySelectorAll(".reveal-on-scroll");
-  if (revealItems.length) {
-    const io = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealItems.forEach((item) => io.observe(item));
+// Force scroll to top when page loads
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
+// Handle back/forward cache
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) window.scrollTo(0, 0);
+});
+
+// Reset before leaving page
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
+// Lucide icons
+if (window.lucide && typeof window.lucide.createIcons === 'function') {
+  window.lucide.createIcons();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Ensure initial paint is at the top
+  window.scrollTo(0, 0);
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+      });
+
+// Hero slider controlled by JavaScript for smooth transitions and seamless looping
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.hero-bg-track');
+  if (!track) return;
+
+  const slides = Array.from(track.children);
+  const total = slides.length; // duplicated slides (e.g. 6)
+  const originals = total / 2; // number of unique slides (e.g. 3)
+  const slidePercent = 100 / total; // e.g. 16.666...
+  const displayMs = 9000; // pause per slide
+  const transitionMs = 400; // must match CSS transition
+
+  let index = 0;
+  let timeoutId = null;
+
+  function setTransform(i, withTransition = true) {
+    if (!withTransition) track.style.transition = 'none';
+    else track.style.transition = `transform ${transitionMs}ms ease`;
+    track.style.transform = `translateX(-${(i * slidePercent).toFixed(6)}%)`;
   }
 
-  const track = document.querySelector(".hero-bg-track");
-  if (track && track.children.length > 2) {
-    const total = track.children.length;
-    const originals = total / 2;
-    const slidePercent = 100 / total;
-    let idx = 0;
-    const displayMs = 2600;
-    const transitionMs = 550;
+  function scheduleNext() {
+    timeoutId = setTimeout(() => {
+      index++;
+      setTransform(index, true);
 
-    const tick = () => {
-      idx += 1;
-      track.style.transition = `transform ${transitionMs}ms ease`;
-      track.style.transform = `translateX(-${(idx * slidePercent).toFixed(6)}%)`;
-      if (idx === originals) {
-        setTimeout(() => {
-          idx = 0;
-          track.style.transition = "none";
-          track.style.transform = "translateX(0%)";
-        }, transitionMs + 15);
+      // When we've moved to the duplicated set (index == originals), reset after transition
+      if (index === originals) {
+        const onEnd = () => {
+          track.removeEventListener('transitionend', onEnd);
+          // jump back to the original first slide without transition
+          index = 0;
+          setTransform(index, false);
+        };
+        track.addEventListener('transitionend', onEnd, { once: true });
       }
-    };
 
-    setInterval(tick, displayMs);
+      scheduleNext();
+    }, displayMs + 0); // show current slide for displayMs, then transition
   }
 
-  const progressBar = document.querySelector(".scroll-progress");
-  const parallaxItems = document.querySelectorAll("[data-parallax]");
-  const doScrollEffects = throttle(() => {
-    const scrollTop = window.scrollY || window.pageYOffset;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    if (progressBar && max > 0) {
-      progressBar.style.width = `${Math.min(100, (scrollTop / max) * 100)}%`;
+  // initialize
+  setTransform(0, false);
+  // small delay before starting so initial paint is stable
+  setTimeout(scheduleNext, displayMs);
+
+  // cleanup on page hide/unload
+  window.addEventListener('pagehide', () => { if (timeoutId) clearTimeout(timeoutId); });
+  window.addEventListener('beforeunload', () => { if (timeoutId) clearTimeout(timeoutId); });
+});
+// --- TESTIMONIALS (Next/Prev + dots) ---
+ 
+    let index = 0;
+
+    // Small fade transition (no dependencies)
+    function animateSwap() {
+      const targets = [avatarEl, quoteEl, nameEl, roleEl, dotsEl];
+      targets.forEach((el) => {
+        el.style.transition = "opacity 240ms ease, transform 240ms ease";
+        el.style.opacity = "0";
+        el.style.transform = "translateY(6px)";
+      });
+
+      window.setTimeout(() => {
+        render();
+        targets.forEach((el) => {
+          el.style.opacity = "1";
+          el.style.transform = "translateY(0)";
+        });
+      }, 220);
     }
 
-    parallaxItems.forEach((el) => {
-      const speed = Number(el.getAttribute("data-parallax")) || 0.08;
-      const y = Math.max(-40, Math.min(40, scrollTop * speed));
-      el.style.transform = `translate3d(0, ${y}px, 0)`;
-    });
-  }, 20);
-  window.addEventListener("scroll", doScrollEffects, { passive: true });
-  doScrollEffects();
-
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (!id || id === "#") return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-
-  document.querySelectorAll(".tilt-card").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const box = card.getBoundingClientRect();
-      const x = e.clientX - box.left;
-      const y = e.clientY - box.top;
-      const rx = ((y / box.height) - 0.5) * -5;
-      const ry = ((x / box.width) - 0.5) * 5;
-      card.style.transform = `rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-4px)`;
-    });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0)";
-    });
-  });
-
-  document.querySelectorAll("[data-count]").forEach((counter) => {
-    const targetValue = Number(counter.getAttribute("data-count")) || 0;
-    let current = 0;
-    const step = Math.max(1, Math.floor(targetValue / 60));
-    const run = () => {
-      current = Math.min(targetValue, current + step);
-      counter.textContent = `${current}${counter.getAttribute("data-suffix") || ""}`;
-      if (current < targetValue) requestAnimationFrame(run);
-    };
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        run();
-        observer.unobserve(entry.target);
+    function renderDots() {
+      dotsEl.innerHTML = "";
+      testimonials.forEach((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", `Go to testimonial ${i + 1}`);
+        b.className = "h-2.5 rounded-full transition-all duration-300 " + (i === index ? "w-10 bg-gray-900" : "w-2.5 bg-gray-300 hover:bg-gray-400");
+        b.addEventListener("click", () => {
+          if (i === index) return;
+          index = i;
+          animateSwap();
+        });
+        dotsEl.appendChild(b);
       });
-    }, { threshold: 0.4 });
-    counterObserver.observe(counter);
-  });
-});
+    }
+
+    function render() {
+      const t = testimonials[index];
+      avatarEl.src = t.avatar;
+      avatarEl.alt = `${t.name} avatar`;
+      quoteEl.textContent = t.quote;
+      nameEl.textContent = t.name;
+      roleEl.textContent = t.role;
+      renderDots();
+
+      // Lucide re-scan (safe to call; fixes any icon updates elsewhere too)
+      if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons();
+      }
+    }
+
+    function next() {
+      index = (index + 1) % testimonials.length;
+      animateSwap();
+    }
+    function prev() {
+      index = (index - 1 + testimonials.length) % testimonials.length;
+      animateSwap();
+    }
+
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
+
+    // Optional: keyboard support when section is in view
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    });
+
+    // First paint
+    render();
+
+    // Start visible (so the first transition doesn’t flash)
+    [avatarEl, quoteEl, nameEl, roleEl, dotsEl].forEach((el) => {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    });
